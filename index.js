@@ -1,3 +1,6 @@
+// Possible movements: right, down, left, up
+const DIRECTIONS = Object.freeze([[0, 1], [1, 0], [0, -1], [-1, 0]]);
+
 /**
  * Finds the shortest path from start to end on a 2D grid
  * @param {number[][]} grid - 2D array where 0 is passable and 1 is a wall
@@ -5,10 +8,6 @@
  * @param {number[]} end - Ending coordinates [x, y]
  * @return {Object|null} - Path and steps if found, null otherwise
  */
-
-// Possible movements: right, down, left, up
-const DIRECTIONS = Object.freeze([[0, 1], [1, 0], [0, -1], [-1, 0]]);
-
 function findShortestPath(grid, start, end) {
     // Validate input data
     if (!grid || !grid.length || !grid.at(0).length) return null;
